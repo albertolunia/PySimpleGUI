@@ -16,28 +16,30 @@ while True:
         break
 
     if evento == '-BOTAO1-':
-        if valores[0] == 'Quilometros' and valores[1] == 'Metros':
-            vf = int(valores["-INPUT-"]) * 1000
-            janela['-RES-'].update(f'Resultado: {vf} Metros')
+        vf = valores["-INPUT-"]
+        if vf.isnumeric():
+            if valores[0] == 'Quilometros' and valores[1] == 'Metros':
+                vf = int(valores["-INPUT-"]) * 1000
+                janela['-RES-'].update(f'Resultado: {vf} Metros')
 
-        if valores[0] == 'Quilometros' and valores[1] == 'Centimetros':
-            vf = int(valores["-INPUT-"]) * 100000
-            janela['-RES-'].update(f'Resultado: {vf} Centimetros')
+            if valores[0] == 'Quilometros' and valores[1] == 'Centimetros':
+                vf = int(valores["-INPUT-"]) * 100000
+                janela['-RES-'].update(f'Resultado: {vf} Centimetros')
 
-        if valores[0] == 'Metros' and valores[1] == 'Quilometros':
-            vf = int(valores["-INPUT-"]) / 1000
-            janela['-RES-'].update(f'Resultado: {vf} Quilometros')
+            if valores[0] == 'Metros' and valores[1] == 'Quilometros':
+                vf = int(valores["-INPUT-"]) / 1000
+                janela['-RES-'].update(f'Resultado: {vf} Quilometros')
 
-        if valores[0] == 'Metros' and valores[1] == 'Centimetros':
-            vf = int(valores["-INPUT-"]) * 100
-            janela['-RES-'].update(f'Resultado: {vf} Centimetros')
+            if valores[0] == 'Metros' and valores[1] == 'Centimetros':
+                vf = int(valores["-INPUT-"]) * 100
+                janela['-RES-'].update(f'Resultado: {vf} Centimetros')
 
-        if valores[0] == 'Centimetros' and valores[1] == 'Quilometros':
-            vf = int(valores["-INPUT-"]) / 100000
-            janela['-RES-'].update(f'Resultado: {vf} Quilometros')
+            if valores[0] == 'Centimetros' and valores[1] == 'Quilometros':
+                vf = int(valores["-INPUT-"]) / 100000
+                janela['-RES-'].update(f'Resultado: {vf} Quilometros')
 
-        if valores[0] == 'Centimetros' and valores[1] == 'Metros':
-            vf = int(valores["-INPUT-"]) / 100
-            janela['-RES-'].update(f'Resultado: {vf} Metros')
+            if valores[0] == 'Centimetros' and valores[1] == 'Metros':
+                vf = int(valores["-INPUT-"]) / 100
+                janela['-RES-'].update(f'Resultado: {vf} Metros')
 
 janela.close()
